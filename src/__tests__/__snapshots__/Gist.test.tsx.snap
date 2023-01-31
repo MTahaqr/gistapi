@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gist should render properly 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.img
+        alt="profile"
+        src="https://api.github.com"
+      />
+      <styled.p>
+        https://api.github.com
+      </styled.p>
+    </styled.div>
+    <styled.div>
+      <Link
+        href="https://api.github.com"
+        target="_blank"
+      >
+        <styled.div>
+          <HiCodeBracket
+            color="#0366D6"
+            size={18}
+          />
+          <styled.p>
+            0
+             files
+          </styled.p>
+        </styled.div>
+      </Link>
+      <Link
+        href="https://api.github.com"
+        target="_blank"
+      >
+        <styled.div>
+          <AiOutlineFork
+            color="#0366D6"
+            size={18}
+          />
+          <styled.p>
+            forks
+          </styled.p>
+        </styled.div>
+      </Link>
+      <Link
+        href="https://api.github.com"
+        target="_blank"
+      >
+        <styled.div>
+          <TfiComment
+            color="#0366D6"
+            size={18}
+          />
+          <styled.p>
+            comments
+          </styled.p>
+        </styled.div>
+      </Link>
+      <Link
+        href="https://api.github.com"
+        target="_blank"
+      >
+        <styled.div>
+          <AiFillStar
+            color="#0366D6"
+            size={18}
+          />
+          <styled.p>
+            Stars
+          </styled.p>
+        </styled.div>
+      </Link>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      Created at: 
+      1/31/2023
+    </styled.div>
+    <styled.div>
+      Last updated: 
+      1/31/2023
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    https://api.github.com
+  </styled.div>
+  <styled.div />
+</styled.div>
+`;
