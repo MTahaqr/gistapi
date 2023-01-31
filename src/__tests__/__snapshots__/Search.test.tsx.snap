@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should render properly 1`] = `
+<styled.div>
+  <styled.div>
+    <AiOutlineSearch
+      color="black"
+      size={20}
+    />
+    <styled.input
+      onChange={[Function]}
+      placeholder="Search Gists for the username"
+      value=""
+    />
+  </styled.div>
+</styled.div>
+`;
