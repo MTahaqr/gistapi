@@ -1,10 +1,9 @@
 import React from 'react';
+// Packages
 import styled from 'styled-components';
-// eslint-disable-next-line
-// @ts-ignore skipping next line because no type was available for react-octicon library
-// import Octicon from 'react-octicon';
-import { Search } from './Search';
 import { BsGithub } from 'react-icons/bs';
+// Components
+import { Search } from './Search';
 
 const Wrapper = styled.div`
   background-color: #24292e;
@@ -24,6 +23,9 @@ interface HeaderProps {
   onChange: (value: string) => void;
 }
 const Header: React.FC<HeaderProps> = ({ onChange }) => {
+  /**
+   * @Render
+   */
   return (
     <Wrapper>
       <BsGithub size={32} />

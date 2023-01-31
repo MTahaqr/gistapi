@@ -1,17 +1,13 @@
 import { Octokit } from '@octokit/rest';
 import { buildApiQueryHook } from './api';
-const octokit = new Octokit({ auth: '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' });
+const octokit = new Octokit({ auth: process.env.REACT_APP_GITHUB_TOKEN });
 
 export interface GistResult {
   url: string;
   forks_url: string;
   commits_url: string;
   id: string;
-  //   node_id: string;
-  //   git_pull_url: string;
-  //   git_push_url: string;
   comments_url: string;
-  //   html_url: string;
   created_at: string;
   updated_at: string;
   description?: string | null;
@@ -24,7 +20,6 @@ export interface GistResult {
       size?: number | undefined;
     };
   };
-  //   history?: unknown[] | undefined;
   owner?: {
     avatar_url: string;
     starred_url: string;

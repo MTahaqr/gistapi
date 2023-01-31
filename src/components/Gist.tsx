@@ -1,11 +1,14 @@
 import React from 'react';
 import { GistResult } from '../services/gistService';
+// Packages
 import styled from 'styled-components';
 import { AiFillStar, AiOutlineFork } from 'react-icons/ai';
 import { TfiComment } from 'react-icons/tfi';
 import { HiCodeBracket } from 'react-icons/hi2';
 import { ImFileText2 } from 'react-icons/im';
-import {Link} from './Link';
+// Components
+
+import { Link } from './Link';
 
 const Gist = ({
   url,
@@ -20,6 +23,10 @@ const Gist = ({
   const avatar = owner?.avatar_url
     ? owner?.avatar_url
     : 'http://www.sheffield.com/wp-content/uploads/2013/06/placeholder.png';
+
+  /**
+   * @Render
+   */
   return (
     <StyledContainer>
       <HeaderContainer>

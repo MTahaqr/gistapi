@@ -1,4 +1,5 @@
-import React, { Children } from 'react';
+import React from 'react';
+// Packages
 import styled from 'styled-components';
 
 interface LinkProps {
@@ -9,6 +10,9 @@ interface LinkProps {
 }
 
 const Link: React.FC<LinkProps> = ({ href, target, rel = 'noreferrer', children }) => {
+      /**
+   * @Render
+   */
   return (
     <LinkWrapper href={href} target={target} rel={rel}>
       {children}
