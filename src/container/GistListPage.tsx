@@ -72,7 +72,6 @@ const StyledContainer = styled.div`
   height: 100vh;
 `;
 const GistListContainer = styled.div`
-  height: 100vh;
   width: 100%;
   overflow: auto;
 `;
