@@ -1,4 +1,18 @@
 import React, { useEffect, useState } from 'react';
-const GistList = () => <></>;
+import { GistResult } from '../services/gistService';
+import styled from 'styled-components';
+import { Gist } from './Gist';
 
-export default GistList;
+const GistList = ({ gistList }: { gistList: GistResult[] }) => {
+  return (
+    <StyledContainer>
+      {gistList?.map((data, index) => (
+        <Gist key={index} {...data} />
+      ))}
+    </StyledContainer>
+  );
+};
+
+export { GistList };
+
+const StyledContainer = styled.div``;
