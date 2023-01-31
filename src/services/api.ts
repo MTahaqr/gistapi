@@ -8,7 +8,7 @@ export type ApiQueryOptions<Result, SelectResult = Result> = Omit<
 export async function handleApiResult<T = unknown>(promise: Promise<{ data: T }>): Promise<T> {
   try {
     const { data } = await promise;
-    return data as any;
+    return data;
   } catch (err: unknown) {
     alert(err);
     throw err;

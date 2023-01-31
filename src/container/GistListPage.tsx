@@ -57,7 +57,7 @@ const GistListPage: React.FC = () => {
             </ImgContainer>
           ) : (
             <GistListContainer>
-              <GistList gistList={list!} />
+              <GistList gistList={list} />
             </GistListContainer>
           )}
         </>
