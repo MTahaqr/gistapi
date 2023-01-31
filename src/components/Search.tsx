@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import styled from 'styled-components';
-// eslint-disable-next-line 
+// eslint-disable-next-line
 // @ts-ignore skipping next line because no type was available for react-octicon library
-import Octicon from 'react-octicon';
+// import Octicon from 'react-octicon';
+import useDebounce from '../Hooks/useDebounce';
+import { AiOutlineSearch } from 'react-icons/ai';
 
-const Search = () => {
+interface SearchProps {
+  onChange: (value: string) => void;
+}
+const Search = ({ onChange }: SearchProps) => {
+  const [searchText, setSearchText] = useState<string>('');
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchText(event.target.value || ''.trim());
+  };
+
+  const debouncedSearchVal = useDebounce(searchText, 500);
+
+  useEffect(() => {
+    onChange(debouncedSearchVal);
+  }, [debouncedSearchVal, onChange]);
+
   return (
     <Wrapper>
       <InputBox>
-        <Octicon name='search' />
-        <Input placeholder='Search Gists for the username' />
+        <AiOutlineSearch color='black' size={20} />
+        <Input
+          value={searchText}
+          placeholder='Search Gists for the username'
+          onChange={handleChange}
+        />
       </InputBox>
     </Wrapper>
   );
@@ -40,4 +61,4 @@ const Input = styled.input`
   }
 `;
 
-export default Search;
+export { Search, SearchProps };
