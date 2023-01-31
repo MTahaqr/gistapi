@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
+// Packages
 import styled from 'styled-components';
-// eslint-disable-next-line
-// @ts-ignore skipping next line because no type was available for react-octicon library
-// import Octicon from 'react-octicon';
+// Hooks
 import useDebounce from '../Hooks/useDebounce';
+// Packages
 import { AiOutlineSearch } from 'react-icons/ai';
 
 interface SearchProps {
@@ -11,17 +11,25 @@ interface SearchProps {
 }
 const Search = ({ onChange }: SearchProps) => {
   const [searchText, setSearchText] = useState<string>('');
-
+  /**
+   * @Methods
+   */
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchText(event.target.value || ''.trim());
   };
 
   const debouncedSearchVal = useDebounce(searchText, 500);
 
+  /**
+   * @Effects
+   */
   useEffect(() => {
     onChange(debouncedSearchVal);
   }, [debouncedSearchVal, onChange]);
 
+  /**
+   * @Render
+   */
   return (
     <Wrapper>
       <InputBox>
